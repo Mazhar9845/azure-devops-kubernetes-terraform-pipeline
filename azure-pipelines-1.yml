@@ -8,38 +8,38 @@ pool:
 stages:
  - stage: build
    jobs:
-   - job: First Job
+   - job: FirstJob
      steps:
      - bash: echo Build firstjob
-   - job: secon job
+   - job: seconjob
      steps:
      - bash: echo build secondjob
 
  - stage: dev
    dependsOn: build
    jobs:
-    - job: First job
+    - job: Firstjob
       steps:
       - bash: echo dev firstjob
-    - job: second job
+    - job: secondjob
       steps:
        - bash: echo dev seconjob
  - stage: Qa
    dependsOn: build
    jobs:
-      - job: First job
+      - job: Firstjob
         steps:
         - bash: echo dev firstjob
-      - job: second job
+      - job: secondjob
         steps:
          - bash: echo dev seconjob
  - stage: prod
    dependsOn: Qa
    jobs:
-   - job: First job
+   - job: Firstjob
      steps:
       - bash: echo dev firstjob
-   - job: second job
+   - job: secondjob
      steps:
          - bash: echo dev seconjob
 

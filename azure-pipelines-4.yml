@@ -24,7 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'memazhar'
-        repository: 'mazhar9845/currency-Conversion'
+        repository: 'mazhar9845/mazhar9845'
         command: 'build'
         Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
